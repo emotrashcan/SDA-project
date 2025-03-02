@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">BrokeNoMore</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <div class="BrokeNoMore">
+        <header>
+            <h1>BrokeNoMore</h1>
+        </header>
+    </div>
+
+    <!-- Main Content and Chart Container -->
+    <div class="content-container">
+        <!-- Main Content -->
+        <div class="main-container">
+            <main>
+                <section class="expenses">
+                    <h2>Expenses</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Expense</th>
+                                <th>Amount</th>
+                                <th>Frequency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>March 2, 2025</td>
+                                <td>Electricity</td>
+                                <td>$80.00</td>
+                                <td>
+                                    <select class="frequency-dropdown" onchange="updateFrequency(this)">
+                                        <option value="monthly">Monthly</option>
+                                        <option value="one-time">One-time</option>
+                                        <option value="annual">Annual</option>
+                                    </select>
+                                    <span class="selected-frequency"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>March 3, 2025</td>
+                                <td>Rent</td>
+                                <td>$1,200.00</td>
+                                <td>
+                                    <select class="frequency-dropdown" onchange="updateFrequency(this)">
+                                        <option value="monthly">Monthly</option>
+                                        <option value="one-time">One-time</option>
+                                        <option value="annual">Annual</option>
+                                    </select>
+                                    <span class="selected-frequency"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td><strong>$3,200.0 0</strong></td>
+                                <td><strong>$1,691.00</strong></td>
+                                <td><strong>$1,509.00</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button class="add-expense-btn">+ Add Expense</button>
+                </section>
+
+                <section class="incomes">
+                    <h2>Incomes</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Income</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Feb 4, 2025</td>
+                                <td>Ecommerce</td>
+                                <td>$8,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>Jan 16, 2025</td>
+                                <td>Salary</td>
+                                <td>$5,000.00</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </section>
+            </main>
+        </div>
+
+        <!-- Chart Aside -->
+        <aside class="chart-aside">
+            <h2>Spending Overview</h2>
+            <canvas id="spendingChart"></canvas>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BrokeNoMore. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

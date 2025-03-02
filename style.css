@@ -1,0 +1,226 @@
+:root {
+    --background-light: #ffffff;
+    --background-dark: #121212;
+    --text-light: #000;
+    --text-dark: #fff;
+    --card-background-light: #f4f4f4;
+    --card-background-dark: #1e1e1e;
+    --accent-color: linear-gradient(135deg, #6a11cb, #410066); /* Improved gradient */
+    --navbar-color: #1e1e1e; /* Dark grey for navbar */
+}
+
+/* Light Theme */
+.light-theme {
+    --background-dark: #ffffff;
+    --text-dark: #000;
+    --card-background-dark: #f4f4f4;
+}
+
+/* Dark Theme */
+.dark-theme {
+    --background-dark: #121212;
+    --text-dark: #fff;
+    --card-background-dark: #1e1e1e;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--navbar-color); /* Dark grey */
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* BrokeNoMore Banner */
+.BrokeNoMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb, #410066); /* Improved gradient */
+    color: white;
+}
+
+
+/* Sidebar */
+/* Content Container */
+.content-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Main Container */
+.main-container {
+    flex: 1; /* Takes up remaining space */
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center the main content */
+}
+
+/* Chart Aside */
+.chart-aside {
+    width: 300px; /* Fixed width for the chart */
+    padding: 15px;
+    background: var(--card-background-dark);
+    border-radius: 8px;
+    position: sticky;
+    top: 20px; /* Sticks to the top */
+    height: fit-content;
+}
+
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-background-dark);
+    font-size: 14px;
+}
+
+th, td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #555;
+}
+
+th {
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb, #410066); /* Improved gradient */
+    color: white;
+    font-size: 14px;
+}
+
+/* drop down */
+.frequency-dropdown {
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: var(--card-background-dark);
+    color: var(--text-dark);
+    font-size: 14px;
+}
+
+.selected-frequency {
+    margin-left: 10px;
+    color: #6a11cb; 
+    font-weight: bold;
+    font-size: 14px;
+}
+
+h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.expenses, .incomes {
+    margin-bottom: 20px; /* Reduced margin between sections */
+}
+
+/* Add Expense Button */
+.add-expense-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #6a11cb, #410066);
+    color: white;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background 0.3s ease;
+}
+
+.add-expense-btn:hover {
+    background: linear-gradient(135deg, #410066, #6a11cb); /* Reverse gradient on hover */
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Chart Aside */
+.chart-aside {
+    width: 300px;
+    padding: 15px;
+    background: var(--card-background-dark);
+    border-radius: 8px;
+}
+
+.chart-aside h2 {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: white;
+    margin-top: 30px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
